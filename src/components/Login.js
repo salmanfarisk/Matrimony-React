@@ -22,7 +22,7 @@ const Login = () =>{
 
         let decorded_responce = await responce.json();
         
-        if(decorded_responce.status === true){
+        if(decorded_responce.status == true){
            localStorage.setItem('access_token',decorded_responce.access_token);
            console.log("success");
         }else{
@@ -30,16 +30,14 @@ const Login = () =>{
         }
     };
     return (
-        <div>
-            <div class="card-header">
-             Featured
-            </div>
-            <form>
-                <div className='form-outline mb-4'>
+        <div className='col-12 col-sm-6 col-md-6'>
+            
+            <form className='form-container'>
+                <div className='form-group'>
                     <label for='email'>Email</label>
                     <input type='text' className='form-control' id='email' onChange={(e) => setEmail(e.target.value)} placeholder='Enter email'/>
                 </div>
-                <div className='form-outline mb-4'>
+                <div className='form-group'>
                     <label for='password'>Password</label>
                     <input type='password' className='form-control' id='password' onChange={(e) => setPassword(e.target.value)} placeholder='Enter password'/>
                 </div>
@@ -48,6 +46,8 @@ const Login = () =>{
                 <input className='btn btn-primary btn-block' type='button' name='login' onClick={onLogin} value='Login'/>
                 
             </form>
+
+            
             
         </div>
     )

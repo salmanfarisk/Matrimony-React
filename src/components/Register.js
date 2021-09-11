@@ -36,9 +36,9 @@ import {useState, useEffect } from 'react';
         
     }
     return (
-      <div>
-      <h3 className='center-align'>Register</h3>
-      <form>
+      <div className='col-12 col-sm-6 col-md-6'>
+      
+      <form className='form-container'>
           <div className='form-group'>
               <label for='name'>Name</label> 
               <input type='text' id='name' className='form-control' placeholder='Enter name' onChange={(e) => setName(e.target.value)} />
@@ -58,7 +58,7 @@ import {useState, useEffect } from 'react';
           </div>
 
           
-          <input className='btn btn-primary' type='button' name='register' onClick={onRegister} value='Register'/>
+          <input className='btn btn-primary btn-block' type='button' name='register' onClick={onRegister} value='Register'/>
          
       </form>
       
