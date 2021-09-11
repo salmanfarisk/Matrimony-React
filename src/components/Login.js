@@ -22,7 +22,7 @@ const Login = () =>{
 
         let decorded_responce = await responce.json();
         
-        if(decorded_responce.status == true){
+        if(decorded_responce.status === true){
            localStorage.setItem('access_token',decorded_responce.access_token);
            console.log("success");
         }else{
