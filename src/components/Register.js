@@ -16,7 +16,7 @@ import {useState, useEffect } from 'react';
         };
           
           
-        let responce = await fetch('http://localhost:8000/api/register',{
+        let responce = await fetch('http://localhost/WayToNikKah/public/api/register',{
           method: "POST",
           headers: {
             "Content-type":"application/json",
@@ -41,20 +41,20 @@ import {useState, useEffect } from 'react';
       <form>
           <div className='form-group'>
               <label for='name'>Name</label> 
-              <input type='text' id='name' class='form-control' placeholder='Enter name' onChange={(e) => setName(e.target.value)} />
+              <input type='text' id='name' className='form-control' placeholder='Enter name' onChange={(e) => setName(e.target.value)} />
           </div>
           <div className='form-group'>
               <label for='email'>Email</label> 
-              <input type='text' id='email' class='form-control' placeholder='Enter email' onChange={(e) => setEmail(e.target.value)}/>
+              <input type='text' id='email' className='form-control' placeholder='Enter email' onChange={(e) => setEmail(e.target.value)}/>
           </div>
           <div className='form-group'>
               <label for='password'>Password</label>
-              <input type='password' id='password' class='form-control' placeholder='Enter password' onChange ={(e) => setPassword(e.target.value)}/>
+              <input type='password' id='password' className='form-control' placeholder='Enter password' onChange ={(e) => setPassword(e.target.value)}/>
           </div>
 
           <div className='form-group'>
               <label for='confirm_password'>Confirm Password</label>
-              <input type='password' id='confirm_password' class='form-control' placeholder='Enter Confirm password' onChange={(e) => setConfirmPassword(e.target.value)}/>
+              <input type='password' id='confirm_password' className='form-control' placeholder='Enter Confirm password' onChange={(e) => setConfirmPassword(e.target.value)}/>
           </div>
 
           
