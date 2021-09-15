@@ -21,3 +21,13 @@
   /* background-image: url("/bg1.jpg"); */
   /* background: url(./bg1.jpg) no-repeat; */
 }
+
+
+.navbar{
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  /* margin-left: -300px; */
+  background-color: blueviolet;
+
+}
