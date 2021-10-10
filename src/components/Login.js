@@ -1,9 +1,12 @@
-import React,{useState} from 'react'
+import React,{useState} from 'react';
+
+import { useHistory } from "react-router-dom";
 
 
 const Login = () =>{
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
+    const history = useHistory();
 
     const onLogin = async(e) =>{
          let request = {
@@ -25,6 +28,8 @@ const Login = () =>{
         if(decorded_responce.status == true){
            localStorage.setItem('access_token',decorded_responce.access_token);
            console.log("success");
+           history.push('/home');
+           
         }else{
           console.log(decorded_responce);
         }

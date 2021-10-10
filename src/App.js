@@ -8,12 +8,18 @@ import Dashboard from './components/Dashboard';
 function App() {
    
     // if(localStorage.getItem('access_token')){
-    //   const history = useHistory();
+     //  const history = useHistory();
     //   history.push("/path");
     // }
   
   useEffect(() => {
     document.body.className = 'body';
+    if(localStorage.getItem('access_token')){
+      //history.push("/home");
+      
+    }else{
+        
+    }
     
   }, []);
 

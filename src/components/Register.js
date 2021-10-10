@@ -1,10 +1,13 @@
 import {useState, useEffect } from 'react';
 
+import { useHistory } from "react-router-dom";
+
  const Register = () =>{
     const [name,setName] = useState('');
     const [email,setEmail] = useState('');
     const [password, setPassword] = useState(''); 
     const [confirm_password, setConfirmPassword] = useState(''); 
+    const history = useHistory();
 
     const onRegister = async (e) =>{
         
@@ -30,6 +33,7 @@ import {useState, useEffect } from 'react';
         if(decorded_responce.status === true){
            localStorage.setItem('access_token',decorded_responce.access_token);
            console.log("success");
+           history.push('/login');
         }else{
           console.log(decorded_responce);
         }
