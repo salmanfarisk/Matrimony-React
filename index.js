@@ -37,4 +37,4 @@ function createFakeCommits(num) {
 }
 
 // Run the function to create 10 fake commits
-createFakeCommits(1);
+createFakeCommits(120);
